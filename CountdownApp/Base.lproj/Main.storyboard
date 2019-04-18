@@ -1,24 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fqa-hr-JcS">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.47"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--彼得潘課程結束倒數-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CountdownApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="v4u-1w-8wX">
+                                <rect key="frame" x="0.0" y="140" width="414" height="706"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PeterPanClass" translatesAutoresizingMaskIntoConstraints="NO" id="C3j-ar-JeT">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
+                                    </imageView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUa-ur-gbz">
+                                        <rect key="frame" x="0.0" y="242" width="414" height="222"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="577893600.41474497">
+                                            <!--2019-04-25 14:00:00 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="datePickerChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xll-WS-Zyr"/>
+                                        </connections>
+                                    </datePicker>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pV7-Ei-igv">
+                                        <rect key="frame" x="0.0" y="484" width="414" height="222"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結束時間" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlE-L0-Wjd">
+                                                <rect key="frame" x="158.5" y="0.0" width="97.5" height="55.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EndTime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLg-8O-5ZJ">
+                                                <rect key="frame" x="161.5" y="55.5" width="91.5" height="55.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="現在距離結束時間" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLK-n8-qea">
+                                                <rect key="frame" x="0.0" y="111" width="414" height="55.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Countdown" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkW-h9-DiU">
+                                                <rect key="frame" x="0.0" y="166.5" width="414" height="55.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="gkW-h9-DiU" firstAttribute="leading" secondItem="pV7-Ei-igv" secondAttribute="leading" id="Bsb-pL-JYj"/>
+                                            <constraint firstAttribute="trailing" secondItem="gLK-n8-qea" secondAttribute="trailing" id="JcW-4F-efP"/>
+                                            <constraint firstItem="gLK-n8-qea" firstAttribute="leading" secondItem="pV7-Ei-igv" secondAttribute="leading" id="YrJ-Ex-NrP"/>
+                                            <constraint firstAttribute="trailing" secondItem="gkW-h9-DiU" secondAttribute="trailing" id="bk3-3o-vib"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pV7-Ei-igv" firstAttribute="leading" secondItem="v4u-1w-8wX" secondAttribute="leading" id="7uM-wc-oua"/>
+                                    <constraint firstAttribute="trailing" secondItem="iUa-ur-gbz" secondAttribute="trailing" id="CTV-HZ-HVx"/>
+                                    <constraint firstItem="iUa-ur-gbz" firstAttribute="leading" secondItem="v4u-1w-8wX" secondAttribute="leading" id="fXb-zn-dAZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="pV7-Ei-igv" secondAttribute="trailing" id="vNb-1u-V1A"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="v4u-1w-8wX" secondAttribute="bottom" constant="50" id="KWI-Tp-JxO"/>
+                            <constraint firstItem="v4u-1w-8wX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bv8-dA-v9N"/>
+                            <constraint firstItem="v4u-1w-8wX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jWm-IJ-HQa"/>
+                            <constraint firstAttribute="trailing" secondItem="v4u-1w-8wX" secondAttribute="trailing" id="vzo-NV-jNv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="彼得潘課程結束倒數" id="9FT-G0-6ua"/>
+                    <connections>
+                        <outlet property="countdownLabel" destination="gkW-h9-DiU" id="KMS-m4-tiY"/>
+                        <outlet property="endDatePicker" destination="iUa-ur-gbz" id="cb6-gi-S07"/>
+                        <outlet property="endLabel" destination="QLg-8O-5ZJ" id="cOY-5u-hG9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="109.82142857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ore-GZ-xP6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fqa-hr-JcS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="e0L-xm-nBi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1ks-Vl-9Gt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yYM-2Q-OMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="222" y="110"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PeterPanClass" width="2120" height="808"/>
+    </resources>
 </document>
